@@ -1,17 +1,18 @@
 import java.util.Date;
 
 /**
- *
  * @author: yuan
  * @date: 2023/1/10
  * Description: 雪花算法
- *
- *   -->原作者：https://blog.csdn.net/jiaomubai?type=blog
+ * 大型分布式项目
+ * <p>
+ * -->原作者：https://blog.csdn.net/jiaomubai?type=blog
  */
 
 public class SnowFlakeUtil {
 
     private static SnowFlakeUtil snowFlakeUtil;
+
     static {
         snowFlakeUtil = new SnowFlakeUtil();
     }
@@ -74,6 +75,7 @@ public class SnowFlakeUtil {
 
     /**
      * 有参构造
+     *
      * @param dataCenterId
      * @param workerId
      */
@@ -93,6 +95,7 @@ public class SnowFlakeUtil {
 
     /**
      * 获取唯一ID
+     *
      * @return
      */
     public static Long getSnowFlakeId() {
@@ -101,6 +104,7 @@ public class SnowFlakeUtil {
 
     /**
      * 通过雪花算法生成下一个id，注意这里使用synchronized同步
+     *
      * @return 唯一id
      */
     public synchronized long nextId() {
@@ -142,6 +146,7 @@ public class SnowFlakeUtil {
 
     /**
      * 获取指定时间戳的接下来的时间戳，也可以说是下一毫秒
+     *
      * @param lastTimeMillis 指定毫秒时间戳
      * @return 时间戳
      */
@@ -155,6 +160,7 @@ public class SnowFlakeUtil {
 
     /**
      * 获取随机字符串,length=13
+     *
      * @return
      */
     public static String getRandomStr() {
@@ -163,6 +169,7 @@ public class SnowFlakeUtil {
 
     /**
      * 从ID中获取时间
+     *
      * @param id 由此类生成的ID
      * @return
      */
